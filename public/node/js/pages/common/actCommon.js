@@ -6,7 +6,6 @@ define(function (require) {
         hasWxUa = Tools.hasUa('MicroMessenger');
 
 
-
     (function () {
         var s = Tools.getParameterByName('utmSource');
         if (!s || !/^(\d|_){1,50}$/.test(s)) {

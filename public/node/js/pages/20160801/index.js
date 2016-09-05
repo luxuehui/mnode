@@ -71,15 +71,28 @@ define(function (require) {
             $threemonth.find('.redbag-item03').html('<span class="sp03">未投资</span>');
         }
     };
+    // var Urls = {
+    //
+    //     getContinuousInvestInfo: '/node/act/continuous/getContinuousInvestInfo?act=206',
+    //     //设置消息提醒
+    //     setMessageReminder: '/node/act/continuous/setMessageReminder?act=206&day=',
+    //     //关闭消息提示
+    //     closeMessageReminder: '/node/act/continuous/closeMessageReminder?act=206',
+    //     //获取设置消息日
+    //     getDay: '/node/act/continuous/getDay?act=206'
+    // };
+
     var Urls = {
 
-        getContinuousInvestInfo: '/node/act/continuous/getContinuousInvestInfo?act=206',
+        getContinuousInvestInfo: 'http://m.iqianjin.com/act/continuous/getContinuousInvestInfo?act=206',
         //设置消息提醒
-        setMessageReminder: '/node/act/continuous/setMessageReminder?act=206&day=',
+        setMessageReminder: 'http://m.iqianjin.com/act/continuous/setMessageReminder?act=206',
         //关闭消息提示
-        closeMessageReminder: '/node/act/continuous/closeMessageReminder?act=206',
+        closeMessageReminder: 'http://m.iqianjin.com/act/continuous/closeMessageReminder?act=206&day=',
         //获取设置消息日
-        getDay: '/node/act/continuous/getDay?act=206'
+        getDay: 'http://m.iqianjin.com/act/continuous/getDay?act=206',
+
+        act:'http://m.iqianjin.com/act/checked?act=206'
     };
 
 
@@ -225,6 +238,7 @@ define(function (require) {
                 if(currentDay){
                     $.ajax({
                         tpye:'GET',
+                        dataType:'json',
                         url:Urls.setMessageReminder+currentDay,
                         success:function(data){
                             investBtnChangeColor.call(data);

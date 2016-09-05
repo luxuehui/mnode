@@ -4,6 +4,8 @@ var connection = require('../resources/connect');
 
 
 var request = require('request');
+// var j = request.jar();
+// j.setCookie('a=b', 'http://httpbin.org');
 
 
 router.get('/', function(req, res) {
@@ -12,7 +14,7 @@ router.get('/', function(req, res) {
 });
 
 
-router.get('/act/20160801', function(req, res) {
+router.get('/node/20160801', function(req, res) {
     res.header("Access-Control-Allow-Origin", "*");
     res.render('20160801');
 });
@@ -84,7 +86,6 @@ let pathApi = {
     act:'/act/checked'
 };
 
-
 /* GET home page. */
 router.get('/node/act/checked', (req, res, next) =>{
 
@@ -111,8 +112,20 @@ router.get('/node'+pathApi.getContinuousInvestInfo, (req, res, next) =>{
     })
 });
 
+router.get('/node'+pathApi.getDay,(req, res, next) =>{
 
-router.get('/node/act/continuous/getContinuousInvestInfo', function(req, res, next) {
+    let actId = req.query.act;
+
+    request(Urls.getDay+actId, function (error, response, body) {
+
+        if (!error && response.statusCode == 200) {
+            console.log(body); // Show the HTML for the Google homepage.
+            res.send(body);
+        }
+    })
+});
+
+router.get('/node'+pathApi.setMessageReminder, function(req, res, next) {
 
     let actId = req.query.act;
 
