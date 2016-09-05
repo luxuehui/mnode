@@ -5,15 +5,7 @@
     {{> common/css}}
     <link rel="stylesheet" href="/node/css/common/liteDialog.css">
     <link rel="stylesheet" href="/node/css/20160801.css">
-    <script>
-        (function px2rem(width) {
-            var scale = width / 100;
-            document.documentElement.style.fontSize = window.innerWidth / scale + 'px';
-            window.onresize = function () {
-                document.documentElement.style.fontSize = window.innerWidth / scale + 'px';
-            };
-        })(640);
-    </script>
+    {{> common/script}}
 </head>
 <body>
 <div class="ui-page">
@@ -93,9 +85,7 @@
     </div>
 
 </div>
-
-<script src="//res.iqianjin.com/mstatic/js/seajs/2.2.1/sea.js"></script>
-<script src="//res.iqianjin.com/mstatic/js/config.js"></script>
+{{> common/js}}
 <script>seajs.use(['/node/js/pages/20160801/index.js']);</script>
 </body>
 </html>
