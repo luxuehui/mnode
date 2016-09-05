@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <title>收益“升值记”</title>
+    {{> common/css}}
+    <link rel="stylesheet" href="/css/common/liteDialog.css">
+    <link rel="stylesheet" href="/css/20160801.css">
+    <script>
+        (function px2rem(width) {
+            var scale = width / 100;
+            document.documentElement.style.fontSize = window.innerWidth / scale + 'px';
+            window.onresize = function () {
+                document.documentElement.style.fontSize = window.innerWidth / scale + 'px';
+            };
+        })(640);
+    </script>
+</head>
+<body>
+<div class="ui-page">
+    <header>
+        <img width="100%" src="/images/20160801/banner.png"/>
+    </header>
+    <section class="invest-amount">
+        <div class="login-area font24">
+        </div>
+        <div class="invest-amount-box1">
+            <ul class="money-bag fn-clear"><li class="money-bag-item01"></li><li class="money-bag-item02"></li><li class="money-bag-item03"></li></ul>
+            <ul class="point-line fn-clear"><li class="point01"></li><li class="line01"></li><li class="point02"></li><li class="line02"></li><li class="point03"></li></ul>
+            <ul class="money-month fn-clear"><li class="money-month-item01">第1个月</li><li class="money-month-item02">第2个月</li><li class="money-month-item03">第3个月</li></ul>
+
+        </div>
+        <div class="invest-amount-box2">
+            <span class="font26 sp04">3个自然月共累计投资金额（元）</span>
+            <div class="investAmount-wrap"></div>
+        </div>
+    </section>
+    <section class="redbag-amount">
+        <ul>
+            <li class="redbag-amount-box" id="onemonth">
+                <div class="redbag-item01"></div>
+                <div class="redbag-item02"><span class="sp01">累计投资金额(元)</span><span class="font36" id="firstAmount">0</span></div>
+                <div class="redbag-item03"><span class="sp03">未投资</span></div>
+            </li>
+            <li class="box-line"><span class="line-item"></span></li>
+            <li class="redbag-amount-box" id="twomonth">
+                <div class="redbag-item01"></div>
+                <div class="redbag-item02"><span class="sp01">累计投资金额(元)</span><span class="font36" id="secondAmount">0</span></div>
+                <div class="redbag-item03"><span class="sp03">未投资</span></div>
+            </li>
+            <li class="box-line"><span class="line-item"></span></li>
+            <li class="redbag-amount-box" id="threemonth">
+                <div class="redbag-item01"></div>
+                <div class="redbag-item02"><span class="sp01">累计投资金额(元)</span><span class="font36" id="thirdAmount">0</span></div>
+                <div class="redbag-item03"><span class="sp03">未投资</span></div>
+            </li>
+            <li class="box-line"><span class="line-item"></span></li>
+            <li class="bottom-box">
+                <span class="font26 sp04">已获得红包金额（元）</span>
+                <div class="redbagAmount-wrap"></div>
+            </li>
+        </ul>
+
+    </section>
+    <section class="go-invest">
+        <div class="go-invest-bord">
+        </div>
+        <dl class="invest-tip"><dt class="invest-tip-l font30">设置投资提醒<span id="setday"></span></dt><dd class="invest-tip-r"><div class="invset-tip-btn" data-click="0"><a href="#"></a></div></dd></dl>
+        <a href="javascript:void(0);" class="go-invest-btn toLogin"></a>
+    </section>
+    <section class="act-rule">
+        <div class="act-rule-tit"></div>
+        <ul class="act-rule-content">
+            <li>•  活动时间：8月1日-8月31日；</li>
+            <li>•  连投玩法：<br/>
+                （1）第一个月：在8月1日-8月31日之间投资1笔整存宝<sup>+</sup>即参与活动，即可获得5元整存宝<sup>+</sup>普通红包奖励；<br/>
+                （2）第二个月：再投资一笔整存宝<sup>+</sup>即可获得翻倍的10元红包奖励；<br/>
+                （3）第三个月：继续投资一笔整存宝<sup>+</sup>产品，可获得您参与活动期间（三个月）的整存宝<sup>+</sup>累计投资金额0.2%的整存宝<sup>+</sup>普通红包，累计金额含三个月内所有整存宝<sup>+</sup>投资金额，不仅限每月投资1笔金额的累计，100元封顶；
+            </li>
+            <li>•  用户未能连续三个月投资整存宝<sup>+</sup>产品，再参与活动需重新计算奖励；</li>
+            <li>•  活动参与产品：整存宝<sup>+</sup>3月期、6月期、12月期产品；</li>
+            <li>•  奖励红包均为整存宝<sup>+</sup>普通红包；</li>
+            <li>•  红包发放时间：第一个月、第二个月奖励红包在当月首笔投资后发放，第三个月的累计投资奖励在第三个月的最后一天发放到您的账户；</li>
+            <li>•  累计投资奖励为活动期间连续投资整存宝<sup>+</sup>三个月的累计金额奖励红包，如未连续三个月，需重新计算奖励金额；</li>
+            <li>•  对活动如有任何疑问，敬请咨询爱钱进客服热线400-812-8808，也可咨询爱钱进微信服务号（搜索公众服务号“爱钱进VIP”或“IQJVIP”）；</li>
+            <li>•  本活动规则解释权归爱钱进所有。</li>
+        </ul>
+    </section>
+
+    <div class="calendar fn-hide">
+        <ul id="calendarUl" class="fn-clear">
+
+        </ul>
+    </div>
+
+</div>
+
+<script src="//res.iqianjin.com/mstatic/js/seajs/2.2.1/sea.js"></script>
+<script src="//res.iqianjin.com/mstatic/js/config.js"></script>
+<script>seajs.use(['/js/pages/20160801/index.js']);</script>
+</body>
+</html>

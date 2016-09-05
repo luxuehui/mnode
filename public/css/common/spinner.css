@@ -1,0 +1,56 @@
+.spinner, .spinner-add, .spinner-input, .spinner-sub {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.spinner {
+    width: 100%;
+    text-align: center;
+}
+
+.spinner-add, .spinner-sub {
+    -webkit-user-select: none;
+    width: 37px;
+    height: 37px;
+    background: url(/mimages/common/ui-spinner.png);
+    background-size: 163px 37px;
+}
+
+.spinner-add {
+    background-position: -42px 0;
+}
+
+.spinner-sub {
+    background-position: 0 0;
+}
+
+.spinner-add.disabled {
+    background-position: -126px 0;
+
+}
+
+.spinner-sub.disabled {
+    background-position: -84px 0;
+
+}
+
+.spinner-input {
+    width: 190px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #E9E9E9;
+    outline: none;
+    color: #666;
+    margin: 0 10px;
+    border-radius: 3px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.spinner-input:disabled {
+    border: 1px solid #f0f0f0;
+    background-color: #fff;
+    color: #c0c0c0;
+}

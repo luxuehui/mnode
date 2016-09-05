@@ -1,0 +1,9 @@
+<script>
+    (function px2rem(width) {
+        var scale = width / 100;
+        document.documentElement.style.fontSize = window.innerWidth / scale + 'px';
+        window.onresize = function () {
+            document.documentElement.style.fontSize = window.innerWidth / scale + 'px';
+        };
+    })(640);
+</script>

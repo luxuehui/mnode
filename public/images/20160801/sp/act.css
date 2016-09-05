@@ -1,0 +1,97 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.act-month1-gray {
+  background-image: url(act.png);
+  background-position: -284px -254px;
+  width: 34px;
+  height: 99px;
+}
+.act-month1-red {
+  background-image: url(act.png);
+  background-position: -324px -135px;
+  width: 34px;
+  height: 99px;
+}
+.act-month2-gray {
+  background-image: url(act.png);
+  background-position: -108px -254px;
+  width: 34px;
+  height: 99px;
+}
+.act-month2-red {
+  background-image: url(act.png);
+  background-position: -152px -254px;
+  width: 34px;
+  height: 99px;
+}
+.act-month3-gray {
+  background-image: url(act.png);
+  background-position: -196px -254px;
+  width: 34px;
+  height: 99px;
+}
+.act-month3-red {
+  background-image: url(act.png);
+  background-position: -240px -254px;
+  width: 34px;
+  height: 99px;
+}
+.act-notused10 {
+  background-image: url(act.png);
+  background-position: 0px -135px;
+  width: 98px;
+  height: 109px;
+}
+.act-notused100 {
+  background-image: url(act.png);
+  background-position: 0px 0px;
+  width: 121px;
+  height: 125px;
+}
+.act-notused5 {
+  background-image: url(act.png);
+  background-position: -108px -135px;
+  width: 98px;
+  height: 109px;
+}
+.act-red-point {
+  background-image: url(act.png);
+  background-position: -328px -254px;
+  width: 32px;
+  height: 23px;
+}
+.act-used10 {
+  background-image: url(act.png);
+  background-position: -216px -135px;
+  width: 98px;
+  height: 109px;
+}
+.act-used5 {
+  background-image: url(act.png);
+  background-position: 0px -254px;
+  width: 98px;
+  height: 109px;
+}
+.act-usednull {
+  background-image: url(act.png);
+  background-position: -262px 0px;
+  width: 121px;
+  height: 125px;
+}
+.act-usedwen {
+  background-image: url(act.png);
+  background-position: -131px 0px;
+  width: 121px;
+  height: 125px;
+}
+.act-yellow-point {
+  background-image: url(act.png);
+  background-position: -328px -287px;
+  width: 32px;
+  height: 23px;
+}
