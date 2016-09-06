@@ -4,8 +4,7 @@ define(function (require) {
         Widgets = require('widgets'),
         Dialog = Widgets.Dialog,
         ac = require('../common/actCommon');
-
-
+    
     var $redbagItem03=$('.redbag-item03'),
         $moneybagItem01=$('.money-bag-item01'),
         $moneybagItem02=$('.money-bag-item02'),
